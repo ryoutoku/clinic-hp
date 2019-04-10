@@ -1,29 +1,105 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <Header/>
+    </header>
+    <transition name="fade">
+      <router-view/>
+    </transition>
+    <footer>(c) 医療法人 孝仁会 杉本整形外科</footer>
   </div>
 </template>
 
+
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+import Header from '@/components/Header.vue';
+
+interface IRouter {
+  meta: {
+    title: string;
+    desc: string;
+  };
+}
+
+@Component({
+  components: {
+    Header
+  }
+})
+export default class App extends Vue {
+  private mounted() {
+    var to = this.$route;
+    this.createPageTitle(to as IRouter);
+  }
+
+  @Watch('$route')
+  private changeRoute(to: IRouter, from: IRouter) {
+    this.createPageTitle(to);
+  }
+
+  private createPageTitle(to: IRouter) {
+    // タイトルを設定
+    if (to.meta.title) {
+      const title = to.meta.title + ' | 医療法人 孝仁会 杉本整形外科';
+      document.title = title;
+    } else {
+      document.title = '医療法人 孝仁会 杉本整形外科';
+    }
+
+    // メタタグdescription設定
+    const element = document.querySelector("meta[name='description']");
+    if (element === null) {
+      return;
+    }
+
+    if (to.meta.desc) {
+      element.setAttribute('content', to.meta.desc);
+    } else {
+      element.setAttribute('content', '医療法人 孝仁会 杉本整形外科');
+    }
+  }
+}
+</script>
+
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #f3f3f3;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+hr {
+  background-color: hsl(204, 86%, 53%);
+  border: 0;
+  height: 2px;
+  width: 95%;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  display: none;
+}
+
+.fade-enter-active {
+  transition: opacity 0.8s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+img {
+  width: 100%;
+  border: 2px solid hsl(204, 86%, 53%);
+  border-radius: 0.5rem;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+  padding-bottom: 1rem;
 }
 </style>
