@@ -26,6 +26,9 @@
             <router-link class="router subtitle is-4" to="/">ホーム</router-link>
           </div>
           <div class="column is-narrow">
+            <router-link class="router subtitle is-4" to="/information">お知らせ</router-link>
+          </div>
+          <div class="column is-narrow">
             <router-link class="router subtitle is-4" to="/guide">院内案内</router-link>
           </div>
           <div class="column is-narrow">

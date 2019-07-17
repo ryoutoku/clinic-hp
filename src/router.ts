@@ -54,11 +54,20 @@ const router = new Router({
         desc: 'とさでん交通後免線 新木停留所より南へ400m。専用駐車場があるため車でのアクセスも可能です。'
       },
       component: () => import('./views/Access.vue')
+    },
+    {
+      path: '/information',
+      name: 'information',
+      meta: {
+        title: 'お知らせ',
+        desc: 'お知らせ'
+      },
+      component: () => import('./views/Information.vue')
     }
   ]
 });
 
-const pathList = ['home', 'guide', 'care', 'doctor', 'access'];
+const pathList = ['home', 'guide', 'care', 'doctor', 'access', 'information'];
 
 router.beforeEach((to, from, next) => {
   if (!pathList.includes('' + to.name)) {
