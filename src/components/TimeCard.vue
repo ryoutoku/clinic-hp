@@ -21,7 +21,7 @@
             <tr>
               <td>
                 午前診療時間
-                <br>09: 00～12: 00
+                <br />09: 00～12: 00
               </td>
               <td>○</td>
               <td>○</td>
@@ -35,7 +35,7 @@
             <tr>
               <td>
                 午後診療時間
-                <br>14: 00～17: 30
+                <br />14: 00～17: 30
               </td>
               <td>○</td>
               <td>○</td>
@@ -68,6 +68,9 @@ export default class TimeCard extends Vue {}
 
 <style scoped lang="scss">
 table {
+  overflow: scroll;
+  table-layout: fixed;
+  width: 100%;
   & th {
     text-align: center;
   }
