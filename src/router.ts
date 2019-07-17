@@ -3,7 +3,7 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -57,3 +57,15 @@ export default new Router({
     }
   ]
 });
+
+const pathList = ['home', 'guide', 'care', 'doctor', 'access'];
+
+router.beforeEach((to, from, next) => {
+  if (!pathList.includes('' + to.name)) {
+    next({ path: '/' });
+  } else {
+    next();
+  }
+});
+
+export default router;
