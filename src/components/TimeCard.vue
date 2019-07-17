@@ -3,52 +3,55 @@
     <TextCard>
       <template v-slot:title>診療時間</template>
       <template v-slot:content>
-        <table class="table is-bordered is-narrow is-hoverable">
-          <thead>
-            <tr>
-              <th>診療日</th>
-              <th>月</th>
-              <th>火</th>
-              <th>水</th>
-              <th>木</th>
-              <th>金</th>
-              <th>土</th>
-              <th>日</th>
-              <th>祝日</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                午前診療時間
-                <br />09: 00～12: 00
-              </td>
-              <td>○</td>
-              <td>○</td>
-              <td>○</td>
-              <td>○</td>
-              <td>○</td>
-              <td>○</td>
-              <td>×</td>
-              <td>×</td>
-            </tr>
-            <tr>
-              <td>
-                午後診療時間
-                <br />14: 00～17: 30
-              </td>
-              <td>○</td>
-              <td>○</td>
-              <td>○</td>
-              <td>×</td>
-              <td>○</td>
-              <td>×</td>
-              <td>×</td>
-              <td>×</td>
-            </tr>
-          </tbody>
-        </table>
-        <slot></slot>
+        <div class="table-wrapper">
+          <table class="table is-bordered is-narrow is-hoverable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+                <th>日</th>
+                <th>祝日</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  09:00
+                  <br />～
+                  <br />12:00
+                </td>
+                <td>○</td>
+                <td>○</td>
+                <td>○</td>
+                <td>○</td>
+                <td>○</td>
+                <td>○</td>
+                <td>×</td>
+                <td>×</td>
+              </tr>
+              <tr>
+                <td>
+                  14:00
+                  <br />〜
+                  <br />17:30
+                </td>
+                <td>○</td>
+                <td>○</td>
+                <td>○</td>
+                <td>×</td>
+                <td>○</td>
+                <td>×</td>
+                <td>×</td>
+                <td>×</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </template>
     </TextCard>
   </div>
@@ -67,10 +70,11 @@ export default class TimeCard extends Vue {}
 </script>
 
 <style scoped lang="scss">
+.table-wrapper {
+  overflow-x: scroll;
+}
+
 table {
-  overflow: scroll;
-  table-layout: fixed;
-  width: 100%;
   & th {
     text-align: center;
   }
