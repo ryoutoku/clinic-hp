@@ -8,21 +8,22 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
+    "core-js": "^2.6.9",
+    "npm-check-updates": "^3.1.20",
     "prettier": "^1.16.4",
     "vue": "^2.6.6",
     "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^8.0.0",
-    "vue-router": "^3.0.1"
+    "vue-property-decorator": "^8.2.1",
+    "vue-router": "^3.0.7"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-typescript": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
+    "@vue/cli-plugin-babel": "^3.9.2",
+    "@vue/cli-plugin-typescript": "^3.9.0",
+    "@vue/cli-service": "^3.9.2",
     "fibers": "^3.1.1",
-    "sass": "^1.17.2",
+    "sass": "^1.22.5",
     "sass-loader": "^7.1.0",
-    "typescript": "^3.2.1",
+    "typescript": "^3.5.3",
     "vue-template-compiler": "^2.5.21"
   }
 }
