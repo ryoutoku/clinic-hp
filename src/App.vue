@@ -69,6 +69,7 @@ export default class App extends Vue {
   text-align: center;
   color: #2c3e50;
   background-color: #f3f3f3;
+  min-height: 100%;
 }
 
 hr {
