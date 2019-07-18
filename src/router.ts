@@ -67,14 +67,4 @@ const router = new Router({
   ]
 });
 
-const pathList = ['home', 'guide', 'care', 'doctor', 'access', 'information'];
-
-router.beforeEach((to, from, next) => {
-  if (!pathList.includes('' + to.name)) {
-    next({ path: '/' });
-  } else {
-    next();
-  }
-});
-
 export default router;
