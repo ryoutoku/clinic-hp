@@ -28,7 +28,7 @@ interface IRouter {
   }
 })
 export default class App extends Vue {
-  private mounted() {
+  private created() {
     var to = this.$route;
     this.createPageTitle(to as IRouter);
   }
