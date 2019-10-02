@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue'
-import Access from './views/Access.vue'
-import Care from './views/Care.vue'
-import Doctor from './views/Doctor.vue'
-import Information from './views/Information.vue'
-import Guide from './views/Guide.vue'
+import Home from './views/Home.vue';
+import Access from './views/Access.vue';
+import Care from './views/Care.vue';
+import Doctor from './views/Doctor.vue';
+import Guide from './views/Guide.vue';
+// import Information from './views/Information.vue';
 
 Vue.use(Router);
 
@@ -19,8 +19,8 @@ const router = new Router({
       component: Home,
       meta: {
         desc:
-          '高知県高知市高須の杉本整形外科は入院設備を有する整形外科有床診療所です。診療科目:整形外科 リウマチ科 リハビリテーション科◇休診日:日曜/祝日◇午後休診:木曜/土曜◇診療時間 9:00～12:00 / 14:00～17:30。'
-      }
+          '高知県高知市高須の杉本整形外科は入院設備を有する整形外科有床診療所です。診療科目:整形外科 リウマチ科 リハビリテーション科◇休診日:日曜/祝日◇午後休診:木曜/土曜◇診療時間 9:00～12:00 / 14:00～17:30。',
+      },
     },
     {
       path: '/guide',
@@ -29,8 +29,8 @@ const router = new Router({
       meta: {
         title: '院内案内',
         desc:
-          '診療科目は整形外科、リウマチ科、リハビリテーション科。専門外来はリウマチ、腰痛、膝関節。検診として骨粗しょう症検診を実施。ジェネリック医薬品、漢方処方の取り扱いをしています。'
-      }
+          '診療科目は整形外科、リウマチ科、リハビリテーション科。専門外来はリウマチ、腰痛、膝関節。検診として骨粗しょう症検診を実施。ジェネリック医薬品、漢方処方の取り扱いをしています。',
+      },
     },
     {
       path: '/care',
@@ -38,9 +38,9 @@ const router = new Router({
       meta: {
         title: '診療案内',
         desc:
-          '診療時間は9:00～12:00 / 14:00～17:30です。木曜・土曜は午後休診です。日曜・祝日は休診です。予約診療は行っていません。受付は午前7時より受付簿にて行っており、診療は受付順となります。'
+          '診療時間は9:00～12:00 / 14:00～17:30です。木曜・土曜は午後休診です。日曜・祝日は休診です。予約診療は行っていません。受付は午前7時より受付簿にて行っており、診療は受付順となります。',
       },
-      component: Care
+      component: Care,
     },
     {
       path: '/doctor',
@@ -48,29 +48,31 @@ const router = new Router({
       meta: {
         title: '医師紹介',
         desc:
-          '院長 医学博士 杉本 康三。日本整形外科学会 整形外科専門医。財団法人 日本リウマチ財団 リウマチ登録医。高齢者の膝の痛みの原因である変形性膝関節症の治療に力を注いでいます。'
+          '院長 医学博士 杉本 康三。日本整形外科学会 整形外科専門医。財団法人 日本リウマチ財団 リウマチ登録医。高齢者の膝の痛みの原因である変形性膝関節症の治療に力を注いでいます。',
       },
-      component: Doctor
+      component: Doctor,
     },
     {
       path: '/access',
       name: 'access',
       meta: {
         title: 'アクセス',
-        desc: 'とさでん交通後免線 新木停留所より南へ400m。専用駐車場があるため車でのアクセスも可能です。'
+        desc: 'とさでん交通後免線 新木停留所より南へ400m。専用駐車場があるため車でのアクセスも可能です。',
       },
-      component: Access
+      component: Access,
     },
+    /*
     {
       path: '/information',
       name: 'information',
       meta: {
         title: 'お知らせ',
-        desc: 'お知らせ'
+        desc: 'お知らせ',
       },
-      component: Information
-    }
-  ]
+      component: Information,
+    },
+    */
+  ],
 });
 
 export default router;
