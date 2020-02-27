@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <header>
-      <Header/>
+      <Header />
     </header>
-    <transition name="fade">
-      <router-view/>
-    </transition>
+    <div class="contents">
+      <transition name="fade">
+        <router-view />
+      </transition>
+    </div>
     <footer>(c) 医療法人 孝仁会 杉本整形外科</footer>
   </div>
 </template>
@@ -69,7 +71,10 @@ export default class App extends Vue {
   text-align: center;
   color: #2c3e50;
   background-color: #f3f3f3;
-  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 hr {
@@ -91,6 +96,10 @@ h1 {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.contents {
+  flex: 1;
 }
 
 img {
