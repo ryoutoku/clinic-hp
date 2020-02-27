@@ -12,7 +12,6 @@
   </div>
 </template>
 
-
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 import Header from '@/components/Header.vue';
@@ -31,7 +30,7 @@ interface IRouter {
 })
 export default class App extends Vue {
   private created() {
-    var to = this.$route;
+    const to = this.$route;
     this.createPageTitle(to as IRouter);
   }
 
@@ -50,7 +49,7 @@ export default class App extends Vue {
     }
 
     // メタタグdescription設定
-    const element = document.querySelector("meta[name='description']");
+    const element = document.querySelector('meta[name="description"]');
     if (element === null) {
       return;
     }
