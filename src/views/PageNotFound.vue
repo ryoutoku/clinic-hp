@@ -24,7 +24,7 @@ import BaseView from '@/views/BaseView.vue';
     BaseView
   }
 })
-export default class Guid extends Vue {}
+export default class PageNotFound extends Vue {}
 </script>
 
 <style scoped lang="scss">
