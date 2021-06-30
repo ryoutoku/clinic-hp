@@ -5,6 +5,7 @@ import Access from './views/Access.vue';
 import Care from './views/Care.vue';
 import Doctor from './views/Doctor.vue';
 import Guide from './views/Guide.vue';
+import NotFound from './views/NotFound.vue';
 // import Information from './views/Information.vue';
 
 Vue.use(Router);
@@ -18,6 +19,7 @@ const router = new Router({
       name: 'home',
       component: Home,
       meta: {
+        title: 'ホーム',
         desc:
           '高知県高知市高須の杉本整形外科は入院設備を有する整形外科有床診療所です。診療科目:整形外科 リウマチ科 リハビリテーション科◇休診日:日曜/祝日◇午後休診:木曜/土曜◇診療時間 9:00～12:00 / 14:00～17:30。',
       },
@@ -61,6 +63,16 @@ const router = new Router({
       },
       component: Access,
     },
+    {
+      path: '/*',
+      name: 'NotFound',
+      component: NotFound,
+      meta: {
+        title: 'お探しのページは見つかりませんでした。',
+        desc:
+          '高知県高知市高須の杉本整形外科は入院設備を有する整形外科有床診療所です。診療科目:整形外科 リウマチ科 リハビリテーション科◇休診日:日曜/祝日◇午後休診:木曜/土曜◇診療時間 9:00～12:00 / 14:00～17:30。',
+      },
+    }
     /*
     {
       path: '/information',
