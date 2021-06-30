@@ -15,13 +15,7 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 import Header from '@/components/Header.vue';
-
-interface IRouter {
-  meta: {
-    title: string;
-    desc: string;
-  };
-}
+import { Route } from 'vue-router/types';
 
 @Component({
   components: {
@@ -31,21 +25,26 @@ interface IRouter {
 export default class App extends Vue {
   private created() {
     const to = this.$route;
-    this.createPageTitle(to as IRouter);
+    this.createPageTitle(to as Route);
   }
 
   @Watch('$route')
-  private changeRoute(to: IRouter, from: IRouter) {
+  private changeRoute(to: Route, from: Route) {
     this.createPageTitle(to);
   }
 
-  private createPageTitle(to: IRouter) {
+  private createPageTitle(to: Route) {
     // タイトルを設定
+    if (to.meta === undefined) {
+      return;
+    }
+
+    const displayBase = '医療法人 孝仁会 杉本整形外科';
+
     if (to.meta.title) {
-      const title = to.meta.title + ' | 医療法人 孝仁会 杉本整形外科';
-      document.title = title;
+      document.title = to.meta.title + ' | ' + displayBase;
     } else {
-      document.title = '医療法人 孝仁会 杉本整形外科';
+      document.title = displayBase;
     }
 
     // メタタグdescription設定
@@ -57,7 +56,7 @@ export default class App extends Vue {
     if (to.meta.desc) {
       element.setAttribute('content', to.meta.desc);
     } else {
-      element.setAttribute('content', '医療法人 孝仁会 杉本整形外科');
+      element.setAttribute('content', displayBase);
     }
   }
 }
