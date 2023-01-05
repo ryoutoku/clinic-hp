@@ -13,14 +13,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 import Header from '@/components/Header.vue';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 import { Route } from 'vue-router/types';
 
 @Component({
   components: {
-    Header
-  }
+    Header,
+  },
 })
 export default class App extends Vue {
   private created() {
