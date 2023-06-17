@@ -33,7 +33,6 @@
 <script lang="ts">
 import TextCard from '@/components/TextCard.vue';
 import { Component, Vue } from 'vue-property-decorator';
-import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
   components: {
