@@ -8,7 +8,14 @@
         <router-view />
       </transition>
     </div>
-    <footer>(c) 医療法人 孝仁会 杉本整形外科</footer>
+    <footer>
+      <div id="”copyright”">
+        (c) 医療法人 孝仁会 杉本整形外科
+        <p>
+          <router-link to="/privacy-policy">プライバシーポリシー</router-link>
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
