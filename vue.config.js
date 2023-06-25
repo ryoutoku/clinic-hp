@@ -14,7 +14,7 @@ module.exports = {
             // 出力先 dist や www など
             staticDir: path.join(__dirname, 'docs'),
             // 生成したいページ
-            routes: ['/', '/access', '/care', '/doctor', '/guide', '/pageNotFound'],
+            routes: ['/', '/access', '/care', '/doctor', '/guide', '/privacy-policy', '/pageNotFound'],
 
             postProcess(renderedRoute) {
               if (renderedRoute.originalRoute === '/pageNotFound') {
