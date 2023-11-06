@@ -18,9 +18,11 @@
         <TextCard>
           <template v-slot:title>院長あいさつ</template>
           <template v-slot:content>
-            <p>病診連携を推進している整形外科の有床診療所です。</p>
-            <p>高齢者の膝の痛みの原因である変形性膝関節症の治療に力を注いでおり、内服薬、関節内注射はもとより、温熱、理学療法から手術まで対応しています。</p>
-            <p>当院ではインフォームドコンセント（説明と同意）を重視しており、充分な説明を心掛けています。</p>
+            <p>
+              高齢者の膝の痛みの原因である変形性膝関節症の治療に力を注いでおり、膝の痛みと歩行障害による患者さんの活動性の低下をできるだけ軽減できるよう、援助していきたいと考えています。
+            </p>
+            <p>病診連携を推進し、地域医療に少しでも貢献できればとの思いで診療しています。</p>
+            <p>当院ではインフォームドコンセント（説明と同意）を重視しており、丁寧で充分な説明を心掛けています。</p>
           </template>
         </TextCard>
         <TextCard>
@@ -68,7 +70,7 @@
       <template v-slot:right-content>
         <ImageCard>
           <template v-slot:content>
-            <img src="@/assets/doctor.jpg" alt="医師">
+            <img src="@/assets/doctor.jpg" alt="医師" />
           </template>
         </ImageCard>
       </template>
@@ -77,20 +79,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import TextCard from '@/components/TextCard.vue';
-import CoursesCard from '@/components/CoursesCard.vue';
-import TimeCard from '@/components/TimeCard.vue';
-import AccessCard from '@/components/AccessCard.vue';
-import BaseView from '@/views/BaseView.vue';
 import ImageCard from '@/components/ImageCard.vue';
+import TextCard from '@/components/TextCard.vue';
+import BaseView from '@/views/BaseView.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
   components: {
     TextCard,
     BaseView,
-    ImageCard
-  }
+    ImageCard,
+  },
 })
 export default class Guid extends Vue {}
 </script>

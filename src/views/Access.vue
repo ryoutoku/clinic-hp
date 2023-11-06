@@ -17,6 +17,14 @@
           </template>
         </TextCard>
         <TextCard>
+          <template v-slot:title>専用駐車場</template>
+          <template v-slot:content>
+            <p>当院の前に4~5台駐車可能です。</p>
+            <p>北に約30m進んだ先にある高知銀行の角を入った場所に30~40台駐車可能です。</p>
+            <p>お車でのご来院の際にご利用ください。</p>
+          </template>
+        </TextCard>
+        <TextCard>
           <template v-slot:title>お問い合わせ</template>
           <template v-slot:content>
             <p>医療法人孝仁会 杉本整形外科</p>
@@ -26,34 +34,39 @@
         </TextCard>
       </template>
       <template v-slot:right-content>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/access_map.jpg" alt="アクセスマップ">
-          </template>
-        </ImageCard>
         <div class="iframeWrap">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.743943685568!2d133.58772781458782!3d33.560028550956176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1c65fdbe61df%3A0x22c0ca844931b20b!2z44CSNzgxLTgxMDQg6auY55-l55yM6auY55-l5biC6auY6aCI77yS5LiB55uu77yR77yY4oiS77yR77yZIOadieacrOaVtOW9ouWkluenkQ!5e0!3m2!1sja!2sjp!4v1554722822083!5m2!1sja!2sjp"
             allowfullscreen
           ></iframe>
         </div>
+        <ImageCard>
+          <template v-slot:content>
+            <img src="@/assets/access_map.jpg" alt="アクセスマップ" />
+          </template>
+        </ImageCard>
+        <ImageCard>
+          <template v-slot:content>
+            <img src="@/assets/parking.jpg" alt="専用駐車場" />
+          </template>
+        </ImageCard>
       </template>
     </BaseView>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import ImageCard from '@/components/ImageCard.vue';
 import TextCard from '@/components/TextCard.vue';
 import BaseView from '@/views/BaseView.vue';
-import ImageCard from '@/components/ImageCard.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
   components: {
     TextCard,
     BaseView,
-    ImageCard
-  }
+    ImageCard,
+  },
 })
 export default class Guid extends Vue {}
 </script>
