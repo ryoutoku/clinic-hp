@@ -16,11 +16,7 @@
         </TextCard>
       </template>
       <template v-slot:right-content>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/exam_room.jpg" alt="診療室" />
-          </template>
-        </ImageCard>
+        <ImageCard src="exam_room.jpg" alt="診療室" />
       </template>
     </BaseView>
   </div>

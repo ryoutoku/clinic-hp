@@ -19,11 +19,7 @@
         <AccessCard />
       </template>
       <template v-slot:right-content>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/appearance.jpg" alt="外観" />
-          </template>
-        </ImageCard>
+        <ImageCard src="appearance.jpg" alt="外観" />
       </template>
     </BaseView>
   </div>

@@ -2,7 +2,7 @@
   <div class="guid">
     <BaseView :title="'院内案内'">
       <template v-slot:left-content>
-        <CoursesCard/>
+        <CoursesCard />
         <TextCard>
           <template v-slot:title>専門外来</template>
           <template v-slot:content>
@@ -25,43 +25,30 @@
         </TextCard>
       </template>
       <template v-slot:right-content>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/room_1.jpg" alt="内観1">
-          </template>
-        </ImageCard>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/room_2.jpg" alt="内観2">
-          </template>
-        </ImageCard>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/room_3.jpg" alt="内観3">
-          </template>
-        </ImageCard>
+        <ImageCard src="room_1.jpg" alt="内観1" />
+        <ImageCard src="room_2.jpg" alt="内観2" />
+        <ImageCard src="room_3.jpg" alt="内観3" />
       </template>
     </BaseView>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import TextCard from '@/components/TextCard.vue';
 import CoursesCard from '@/components/CoursesCard.vue';
 import ImageCard from '@/components/ImageCard.vue';
+import TextCard from '@/components/TextCard.vue';
 import BaseView from '@/views/BaseView.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
   components: {
     TextCard,
     CoursesCard,
     ImageCard,
-    BaseView
-  }
+    BaseView,
+  },
 })
 export default class Guid extends Vue {}
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
