@@ -40,16 +40,8 @@
             allowfullscreen
           ></iframe>
         </div>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/access_map.jpg" alt="アクセスマップ" />
-          </template>
-        </ImageCard>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/parking.jpg" alt="専用駐車場" />
-          </template>
-        </ImageCard>
+        <ImageCard src="access_map.jpg" alt="アクセスマップ" />
+        <ImageCard src="parking.jpg" alt="専用駐車場" />
       </template>
     </BaseView>
   </div>

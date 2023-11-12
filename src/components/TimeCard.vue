@@ -3,28 +3,27 @@
     <TextCard>
       <template v-slot:title>診療時間</template>
       <template v-slot:content>
-        <div class="table-wrapper">
+        <div class="table-container">
           <table class="table is-bordered is-narrow is-hoverable">
             <thead>
               <tr>
-                <th></th>
-                <th>月</th>
-                <th>火</th>
-                <th>水</th>
-                <th>木</th>
-                <th>金</th>
-                <th>土</th>
-                <th>日</th>
-                <th>祝日</th>
+                <th scope="col"></th>
+                <th scope="col">月</th>
+                <th scope="col">火</th>
+                <th scope="col">水</th>
+                <th scope="col">木</th>
+                <th scope="col">金</th>
+                <th scope="col">土</th>
+                <th scope="col">日</th>
+                <th scope="col">祝日</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <th scope="row">
                   09:00
-                  <br />～
-                  <br />12:00
-                </td>
+                  <br />～ <br />12:00
+                </th>
                 <td>○</td>
                 <td>○</td>
                 <td>○</td>
@@ -35,11 +34,10 @@
                 <td>×</td>
               </tr>
               <tr>
-                <td>
+                <th scope="row">
                   14:00
-                  <br />〜
-                  <br />17:30
-                </td>
+                  <br />〜 <br />17:30
+                </th>
                 <td>○</td>
                 <td>○</td>
                 <td>○</td>
@@ -58,25 +56,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
 import TextCard from '@/components/TextCard.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
   components: {
-    TextCard
-  }
+    TextCard,
+  },
 })
 export default class TimeCard extends Vue {}
 </script>
 
 <style scoped lang="scss">
-.table-wrapper {
-  overflow-x: scroll;
-}
-
 table {
   & th {
-    text-align: center;
+    text-align: center !important;
+    vertical-align: middle;
   }
 
   & th:nth-child(n + 8) {
@@ -97,5 +92,11 @@ table {
     font-weight: bold;
   }
   margin-bottom: 1.5rem;
+}
+
+table,
+th,
+td {
+  border-color: gray !important;
 }
 </style>

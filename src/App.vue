@@ -12,7 +12,7 @@
       <div id="”copyright”">
         (c) 医療法人 孝仁会 杉本整形外科
         <p>
-          <router-link to="/privacy-policy">プライバシーポリシー</router-link>
+          <router-link to="/privacy-policy" class="has-text-black">プライバシーポリシー</router-link>
         </p>
       </div>
     </footer>

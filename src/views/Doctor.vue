@@ -68,11 +68,7 @@
         </TextCard>
       </template>
       <template v-slot:right-content>
-        <ImageCard>
-          <template v-slot:content>
-            <img src="@/assets/doctor.jpg" alt="医師" />
-          </template>
-        </ImageCard>
+        <ImageCard src="doctor.jpg" alt="医師" />
       </template>
     </BaseView>
   </div>
