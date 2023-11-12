@@ -110,7 +110,7 @@ nav {
       padding: 12px 2rem;
       margin: -12px -2rem;
       &.router-link-exact-active {
-        color: #363636;
+        color: black;
       }
     }
   }
