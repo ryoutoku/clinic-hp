@@ -1,1 +1,8 @@
 User-agent: *
+
+Disallow: /guide
+Disallow: /care
+Disallow: /doctor
+Disallow: /access
+Disallow: /information
+Disallow: /privacy-policy
