@@ -1,0 +1,27 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: clinic-hp
+
+    ports:
+      - "8080:8080"
+
+    working_dir: /app
+
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+
+    tty: true
+    stdin_open: true
+
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+
+    command: yarn run serve
+
+volumes:
+  node_modules:
