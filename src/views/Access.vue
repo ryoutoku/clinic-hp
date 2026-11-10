@@ -41,7 +41,8 @@
           ></iframe>
         </div>
         <ImageCard src="access_map.jpg" alt="アクセスマップ" />
-        <ImageCard src="parking.jpg" alt="専用駐車場" />
+        <ImageCard src="parking_1.jpg" alt="専用駐車場" />
+        <ImageCard src="parking_2.jpg" alt="専用駐車場" />
       </template>
     </BaseView>
   </div>
